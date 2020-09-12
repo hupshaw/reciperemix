@@ -16,11 +16,6 @@ function Mealfill() {
   );
 }
 
-function addIngredient() {
-  return (
-    <input type="text" placeholder="ingredient"/>
-  )
-}
 
 class Selection extends React.Component {
   constructor(props) {
@@ -40,4 +35,4 @@ class Selection extends React.Component {
 };
 
 
-export default Selection;
+export default Selection ;
