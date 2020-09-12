@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#customize {
+  display: flex;
+  justify-content: space-between;
+}
+
+#content {
+  display: flex;
+}
+
+#header {
+  margin-left: 2.5%;
+}
+
+#left {
+  margin-left: 5%;
+
+}
+
+#recipe {
+  position: absolute;
+  margin-left: 50%;
+}

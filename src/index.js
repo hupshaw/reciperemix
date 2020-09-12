@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Selection from './app.js';
+import Instructions from './instructions.js';
 
-const myfirstelement = (
-      <ul>
-        <li>Cake</li>
-        <li>Vegetables</li>
-        <li>Homicide</li>
-      </ul>
+const food = {
+  dish: "pavlova",
+  flavor: "sweet"
+}
+
+ReactDOM.render(<Selection recipe={food}/>, document.getElementById('customize')
+);
+ReactDOM.render(<Instructions />, document.getElementById('instructions')
 );
 
-ReactDOM.render(myfirstelement, document.getElementById('root')
-);
+export default food;
