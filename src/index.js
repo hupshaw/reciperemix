@@ -9,6 +9,7 @@ const food = {
   flavor: "sweet"
 }
 
+
 ReactDOM.render(<Selection recipe={food}/>, document.getElementById('customize')
 );
 ReactDOM.render(<Instructions />, document.getElementById('instructions')
