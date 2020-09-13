@@ -1,23 +1,28 @@
 import React from 'react';
 import API from './api.js';
-//import Button from './button.js'
 
 class Instructions extends React.Component {
 
-  constructor() {
-    super();
+
+  constructor(props) {
+    super(props);
     this.state = { data: [] };
   }
 
   //forces the page to load from the API before rendering
   //assigns backend response to this.state
-/*  async componentDidMount() {
-    const response = await API.post('api/recipe', {
+  async componentDidMount() {
+    const response = await API.post('api/recipe/michael', {
       food: 'oranges'
     });
-    this.setState({ data: response.data.recipe });
-  } */
-
+    var responseData = response.data.recipe.join(' ')
+    .replace('[', '')
+    .replace(/'/g, '')
+    .replace(/,/g, '')
+    .replace(/]/g, '');
+    //alert(typeof(responseData));
+    this.setState({ data: responseData });
+  }
 
 
   //TODO: Format this.state.data in this function
@@ -26,9 +31,9 @@ class Instructions extends React.Component {
     const instructionList = instructions.split(",");
 
     return (
-      <ol id="instructions">
+      <ol>
       {instructionList.map(instruction => (
-        <li class="instruction">
+        <li>
           {instruction}
           </li>
         ))}
@@ -36,11 +41,12 @@ class Instructions extends React.Component {
     )
   };
 
-  //print the recipe instructions
   render() {
     //Use this.state.data when the model is running
-    //return ( this.state.data );
-    return ( this.formatInstructions() );
+    if(this.props.generate===true)
+      return ( this.state.data );
+    else
+      return ( this.formatInstructions() );
   }
 }
 
