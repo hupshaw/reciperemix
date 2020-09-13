@@ -11,12 +11,12 @@ class Instructions extends React.Component {
 
   //forces the page to load from the API before rendering
   //assigns backend response to this.state
-  async componentDidMount() {
+/*  async componentDidMount() {
     const response = await API.post('api/recipe', {
       food: 'oranges'
     });
     this.setState({ data: response.data.recipe });
-  }
+  } */
 
 
 
@@ -26,9 +26,9 @@ class Instructions extends React.Component {
     const instructionList = instructions.split(",");
 
     return (
-      <ol>
+      <ol id="instructions">
       {instructionList.map(instruction => (
-        <li>
+        <li class="instruction">
           {instruction}
           </li>
         ))}

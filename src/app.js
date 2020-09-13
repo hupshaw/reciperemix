@@ -26,7 +26,7 @@ class Selection extends React.Component {
         <p>I'm looking for a </p>
         <Mealfill />
         <p> with </p>
-        <input type="text" placeholder="ingredient" onKeyDown="addIngredient()"/>
+        <input type="text" placeholder="ingredients, separated by commas" onKeyDown="addIngredient()"/>
       </form>
     )
   }
