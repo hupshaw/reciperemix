@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Selection from './app.js';
 import Instructions from './instructions.js';
+// import MixItUp from './button.js';
 
 const food = {
   dish: "pavlova",
