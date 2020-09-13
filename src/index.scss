@@ -22,6 +22,7 @@ code {
 #container {
   margin: 0;
   padding: 30px;
+  padding-bottom: 0px;
   width: 102%;
   background-color: lighten($corny, 30%);
   background-image: url("bg.svg");
@@ -36,7 +37,8 @@ code {
     align-items: center;
     justify-content: space-between;
     height: 30px;
-    width: 90%;
+    width: 100%;
+    text-align: right;
     select, input {
       max-height: 100%;
       border-radius: 5px;
@@ -46,10 +48,10 @@ code {
       opacity: 100%;
     }
     select {
-      flex: 20%;
+      flex: 15%;
     }
     input {
-      flex: 40%;
+      flex: 35%;
     }
     p:nth-child(1) {
       flex: 20%;
@@ -59,6 +61,8 @@ code {
 
 #content {
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 
 #header {
@@ -147,9 +151,11 @@ code {
 }
 
 #footer {
-  position: absolute;
+  position: fixed;
   right: 5px;
-  bottom: 3px;
+  bottom: 5px;
+  float: right;
+  z-index: 0;
 }
 
 @media (max-width: 600px) {
