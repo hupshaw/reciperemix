@@ -1,5 +1,6 @@
 import React from 'react';
 import API from './api.js';
+//import Button from './button.js'
 
 class Instructions extends React.Component {
 
@@ -16,6 +17,7 @@ class Instructions extends React.Component {
     });
     this.setState({ data: response.data.recipe });
   }
+
 
 
   //TODO: Format this.state.data in this function

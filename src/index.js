@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Selection from './app.js';
 import Instructions from './instructions.js';
-// import MixItUp from './button.js';
+import MixItUp from './button.js';
 
 const food = {
   dish: "pavlova",
@@ -11,9 +11,8 @@ const food = {
 }
 
 
-ReactDOM.render(<Selection recipe={food}/>, document.getElementById('customize')
-);
-ReactDOM.render(<Instructions />, document.getElementById('instructions')
-);
+ReactDOM.render(<Selection recipe={food}/>, document.getElementById('customize'));
+ReactDOM.render(<Instructions />, document.getElementById('instructions'));
+ReactDOM.render(<MixItUp />, document.getElementById('mixitup'));
 
 export default food;
