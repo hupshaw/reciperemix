@@ -34,9 +34,9 @@ code {
   form {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 30px;
-    width: 85%;
+    width: 90%;
     select, input {
       max-height: 100%;
       border-radius: 5px;
@@ -44,6 +44,15 @@ code {
       color: $butternut;
       font-weight: 700;
       opacity: 100%;
+    }
+    select {
+      flex: 20%;
+    }
+    input {
+      flex: 40%;
+    }
+    p:nth-child(1) {
+      flex: 20%;
     }
   }
 }
@@ -99,14 +108,20 @@ code {
   margin-right: 5%;
   padding: 20px 30px;
   border-radius: 30px;
+  border-bottom-right-radius: 50px;
   background-color: lighten($corny, 40%);
 
   box-shadow: -3px 5px 10px adjust-color($bluer, $alpha: -0.8);
   #recipe {
     padding: 10px 20px;
     border-radius: 30px;
+    border-bottom-right-radius: 50px;
     border-bottom: 2pt solid $butternut;
     border-right: 2pt solid $butternut;
+    h2 {
+      color: $blue;
+      font-weight: 800;
+    }
     ol {
       li {
         color: $bluer;
@@ -129,12 +144,41 @@ code {
       }
     }
   }
-
 }
-
 
 #footer {
   position: absolute;
   right: 5px;
   bottom: 3px;
+}
+
+@media (max-width: 600px) {
+  #header {
+    max-width: 85%;
+  }
+  #content {
+    display: block;
+    #left {
+      max-width: 85%;
+      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
+      #customize {
+        form {
+          display: block;
+        }
+      }
+      button {
+        margin: auto;
+        float: none;
+      }
+    }
+    #right {
+      bottom: 0px;
+      max-width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+    }
+  }
 }
