@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="https://use.typekit.net/yfm4awz.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
       content="Random Recipe Generator created using create-react-app"
     />
-
+    <script src="https://kit.fontawesome.com/1bcdd38cc2.js" crossorigin="anonymous"></script>
     <title>Recipe Remix</title>
   </head>
   <body>
+    <div id="container">
     <div id="header">
-      <h1>Recipe Remix</h1>
-      <p>Tell us what you're looking for, and we'll generate a random recipe!</p>
+      <div class="titlecontainer">
+      </div>
+      <p>Tired of the same old thing? Why not generate a never-before-seen recipe with our <b>recipe randomizing AI!</b> </p>
     </div>
 
     <div id="content">
@@ -23,15 +26,20 @@
           <div id="customize">
           </div>
         </div>
-        <button type="button"> Mix it up!</button>
+        <button type="button">Mix it up!</button>
       </div>
 
-
-      <div id="recipe">
-        <h2>Recipe Title</h2>
-        <ol id="instructions">
-        </ol>
+      <div id="right">
+        <div id="recipe">
+          <h2>The Youngest Recipe There Is</h2>
+          <div id="instructions">
+          </div>
+        </div>
       </div>
     </div>
+    <div id="footer">
+      <p>made with <span><i class="fas fa-paw"></i></span> by Clemson University hackers</p>
+    </div>
+  </div>
   </body>
 </html>
