@@ -27,9 +27,9 @@ code {
 #customize form {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 30px;
-  width: 85%;
+  width: 90%;
 }
 #customize form select, #customize form input {
   max-height: 100%;
@@ -38,6 +38,15 @@ code {
   color: #F9BD62;
   font-weight: 700;
   opacity: 100%;
+}
+#customize form select {
+  flex: 20%;
+}
+#customize form input {
+  flex: 40%;
+}
+#customize form p:nth-child(1) {
+  flex: 20%;
 }
 
 #content {
@@ -91,14 +100,20 @@ code {
   margin-right: 5%;
   padding: 20px 30px;
   border-radius: 30px;
+  border-bottom-right-radius: 50px;
   background-color: white;
   box-shadow: -3px 5px 10px rgba(22, 70, 96, 0.2);
 }
 #right #recipe {
   padding: 10px 20px;
   border-radius: 30px;
+  border-bottom-right-radius: 50px;
   border-bottom: 2pt solid #F9BD62;
   border-right: 2pt solid #F9BD62;
+}
+#right #recipe h2 {
+  color: #68DFD8;
+  font-weight: 800;
 }
 #right #recipe ol li {
   color: #164660;
@@ -123,6 +138,36 @@ code {
   position: absolute;
   right: 5px;
   bottom: 3px;
+}
+
+@media (max-width: 600px) {
+  #header {
+    max-width: 85%;
+  }
+
+  #content {
+    display: block;
+  }
+  #content #left {
+    max-width: 85%;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #content #left #customize form {
+    display: block;
+  }
+  #content #left button {
+    margin: auto;
+    float: none;
+  }
+  #content #right {
+    bottom: 0px;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
